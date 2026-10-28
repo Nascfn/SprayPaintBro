@@ -9,7 +9,9 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173 and click to play. `npm run build` outputs a static site in `dist/` that can be hosted anywhere (GitHub Pages, Netlify, …).
+Open http://localhost:5173 and click to play. `npm run build` outputs a static site in `dist/`.
+
+Play online at https://nascfn.github.io/SprayPaintBro/. Every push to `main` redeploys it via GitHub Actions.
 
 ## Controls
 

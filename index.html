@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spray Paint Bro</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="hud" class="hidden">
+      <div id="ring"></div>
+      <div id="crosshair"></div>
+      <div id="toast"></div>
+      <div id="hint">
+        <b>LMB</b> spray · <b>Wheel</b> cap · <b>1–9</b> color · <b>Tab</b> picker<br />
+        <b>R</b> shake · <b>C</b> clear wall · <b>Ctrl+Z</b> undo · <b>Esc</b> pause
+      </div>
+      <div id="hotbar"></div>
+      <div id="nozzle"></div>
+    </div>
+
+    <div id="start" class="overlay loading">
+      <div class="panel">
+        <h1 class="title">SPRAY<br />PAINT BRO</h1>
+        <div class="cta">Click to play</div>
+        <div class="controls">
+          <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><span>Move · <kbd>Shift</kbd> sprint · <kbd>Space</kbd> jump</span>
+          <span><kbd>LMB</kbd></span><span>Spray (closer = sharper line)</span>
+          <span><kbd>Wheel</kbd></span><span>Switch nozzle cap</span>
+          <span><kbd>1</kbd>–<kbd>9</kbd> · <kbd>Tab</kbd></span><span>Pick a color · open the color picker</span>
+          <span><kbd>R</kbd></span><span>Shake the can</span>
+          <span><kbd>C</kbd> · <kbd>Ctrl</kbd>+<kbd>Z</kbd></span><span>Clear the wall · undo</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="pause" class="overlay" hidden>
+      <div class="panel">
+        <h1 class="title">PAUSED</h1>
+        <div class="cta">Click to resume</div>
+      </div>
+    </div>
+
+    <div id="picker" class="overlay" hidden>
+      <div class="panel">
+        <h2>Color for slot <span id="picker-slot">1</span></h2>
+        <div id="palette"></div>
+        <div class="picker-row">
+          <label>Custom <input id="custom-color" type="color" /></label>
+          <button id="picker-done">Back to painting (Tab)</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
